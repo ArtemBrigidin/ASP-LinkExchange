@@ -1,0 +1,27 @@
+﻿@* @page
+@model LinkExchange.Models.UserAuthModel
+
+<form method="POST">
+    <div>
+        <label for="UserName">Username:</label>
+        <input type="text" id="UserName" asp-for="Input.UserName" />
+        <span asp-validation-for="Input.UserName" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label for="Password">Password:</label>
+        <input type="password" id="Password" asp-for="Input.Password" />
+        <span asp-validation-for="Input.Password" class="text-danger"></span>
+    </div>
+
+    <div>
+        <input type="submit" value="Submit" />
+    </div>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+ *@

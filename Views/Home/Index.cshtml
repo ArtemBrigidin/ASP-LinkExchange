@@ -1,0 +1,34 @@
+﻿@model List<LinkModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+        <div class="row-left">
+    SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT
+    SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT
+    SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT
+
+        </div>
+        <div class="OrderList">
+
+    <h1>Список ссылок</h1>
+    <div>
+        @foreach (var link in Model)
+        {
+            <div class="link-block">
+                <h3>Url: @link.Url | Продавец: </h3>
+                    <a asp-controller="User" asp-action="Profile" asp-route-id="@link.User.Id">@link.User.Username </a>
+                    <h3> | Price = @link.Price </h3>
+                    <button class="buy-button">Buy</button>
+            </div>
+        }
+    </div>
+
+        </div>
+        <div class="row-right">
+
+    SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT
+    SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT
+    SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT SOME CONTENT
+
+        </div>
